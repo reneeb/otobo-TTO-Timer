@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otobo_package version="1.1">
+    <Name>TTO-Timer</Name>
+    <Version>10.0.2</Version>
+    <Vendor>TTO GmbH</Vendor>
+    <URL>http://tto.de</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
+    <ChangeLog Date="2018-01-04 09:37:19 UTC+1" Version="6.0.0">Migrated to v6.x</ChangeLog>
+    <ChangeLog Date="2016-11-23 10:41:37 UTC+1" Version="5.0.8">Added default fallback time of 15 (minutes) to the timer</ChangeLog>
+    <ChangeLog Date="2016-09-14 16:56:23 UTC+1" Version="5.0.7">Added Hungarian translation and improved formatting, thanks to Balázs Úr</ChangeLog>
+    <ChangeLog Date="2016-08-08 08:41:31 UTC+1" Version="5.0.6">fixed check of current template</ChangeLog>
+    <ChangeLog Date="2016-07-06 16:00:33 UTC+1" Version="5.0.5">Fixed chrome bug: background tab sleeps javascript execution</ChangeLog>
+    <ChangeLog Date="2016-03-21 13:17:24 UTC+1" Version="5.0.4">Bugfixes and usage of hook instead of hardcoded template-modifications</ChangeLog>
+    <ChangeLog Date="2016-03-18 15:43:37 UTC+1" Version="5.0.3">Used template hooks instead of hardcoded customization</ChangeLog>
+    <ChangeLog Date="2016-03-18 14:08:51 UTC+1" Version="5.0.2">Migrated to custom repo</ChangeLog>
+    <ChangeLog Date="2015-09-17 14:49:05 UTC" Version="5.0.1">Bugfix</ChangeLog>
+    <ChangeLog Date="2015-09-17 14:34:22 UTC" Version="5.0.0">Migrated to 5.x</ChangeLog>
+    <ChangeLog Date="2015-07-30 06:49:57 UTC" Version="1.0.1">Fixed js lib beeing pulled from remote server</ChangeLog>
+    <ChangeLog Date="2015-07-29 14:38:27 UTC" Version="1.0.0">Initial Release</ChangeLog>
+    <ChangeLog>Initial Release</ChangeLog>
+    <Description Lang="en">Shows the time spent on AgentTicketZoom</Description>
+    <Description Lang="de">Zeigt die Zeit an, die auf ein TicketZoom verbracht wird.</Description>
+    <Description Lang="hu">Megjeleníti az ügyintézői jegynagyításon eltöltött időt.</Description>
+    <Framework>10.0.x</Framework>
+    <Framework>10.1.x</Framework>
+    <IntroInstall Lang="en" Title="Install Information" Type="pre">
+        &lt;br&gt;
+        &lt;strong&gt; Welcome! &lt;/strong&gt;&lt;br&gt;
+        Contains:&lt;br&gt;
+        - A timer on AgentTicketZoom&lt;br&gt;
+        - A module to prefill the timeunits field if it is present&lt;br&gt;
+        - Clicking on the timer opens a note with the current time prefilled&lt;br&gt;
+        &lt;br&gt;
+    </IntroInstall>
+    <IntroInstall Lang="de" Title="Install Information" Type="pre">
+        &lt;br&gt;
+        &lt;strong&gt; Willkommen! &lt;/strong&gt;&lt;br&gt;
+        Enthält:
+        - Einen Timer im AgentTicketZoom&lt;br&gt;
+        - Ein Modul um die TimeUnits Felder mit einem konfigurierbaren Zeitwert vorzubefüllen&lt;br&gt;
+        - Übergabe des aktuellen Timer Wertes auf AgentTicketNote (per Klick auf den Timer)&lt;br&gt;
+        &lt;br&gt;
+    </IntroInstall>
+    <IntroInstall Lang="hu" Title="Telepítési információk" Type="pre">
+        &lt;br&gt;
+        &lt;strong&gt;Üdvözöljük!&lt;/strong&gt;&lt;br&gt;
+        Ez a csomag a következőket tartalmazza:&lt;br&gt;
+        - Egy időmérőt az ügyintézői jegynagyításon&lt;br&gt;
+        - Egy modult az időegységek mező előre kitöltéséhez, ha az jelen van&lt;br&gt;
+        - Az időmérőre kattintva megnyit egy jegyzetet, előre kitöltve az aktuális idővel&lt;br&gt;
+        &lt;br&gt;
+    </IntroInstall>
+    
+    
+    <Filelist>
+        <File Location="Custom/Kernel/Output/HTML/TTO/DefaultTimeUnitsFilter.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/TicketZoom/TTOTimer.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TTOTimer.tt" Permission="644"/>
+        <File Location="var/httpd/htdocs/skins/Agent/tto-slim/css/Core.Timer.css" Permission="644"/>
+        <File Location="var/httpd/htdocs/js/thirdparty/TTO/Core.Timer.js" Permission="644"/>
+        <File Location="Kernel/Config/Files/XML/TTOTimer.xml" Permission="644"/>
+        <File Location="Kernel/Language/de_TTO_Timer.pm" Permission="644"/>
+        <File Location="Kernel/Language/hu_TTO_Timer.pm" Permission="644"/>
+    </Filelist>
+</otobo_package>

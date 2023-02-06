@@ -1,0 +1,20 @@
+            <link href="[% Config("Frontend::WebPath") %]skins/Agent/tto-slim/css/Core.Timer.css" rel="stylesheet" />
+            <div class="WidgetSimple">
+                <div class="Header">
+                    <div class="WidgetAction Toggle">
+                        <a href="#" title="[% Translate("Show or hide the content") | html %]"><i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i></a>
+                    </div>
+                    <h2>[% Translate("Time spent zoomed on ticket") | html %]</h2>
+                </div>
+                <div class="Content">
+                <a href="[% Env("Baselink") %]Action=AgentTicketNote&TicketID=[% Data.TicketID | uri %]&TimerTimeUnits=[% Config("TTO::OutputFilter::Config::DefaultTimeUnitsValue") | uri %]" id="TimerLink" class="AsPopup PopupType_TicketAction">
+                    <div id="clock" class="light">
+                        <div class="display">
+                            <div class="digits"></div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/momentjs-[% Data.MomentVersion %]/moment.min.js"></script>
+            <script src="[% Config("Frontend::WebPath") %]js/thirdparty/jquery-[% Data.JqueryVersion %]/jquery.js"></script>
